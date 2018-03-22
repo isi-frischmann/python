@@ -1,0 +1,5 @@
+pip install {Django} = You can download different librarys programms.
+pip list = show you which tools you have uploaded and also with version
+pip list --outdated = shows you if there is a new version on the market
+pip freeze = shows you which tools you have uploaded with the actual version number in the required format (if you need to send someone the tools you have worked on it is very easy to send them the infos)
+pip freeze > requirements.txt = If you want to send the tools you have worked on all your tools will be listed below and can easily download them 
