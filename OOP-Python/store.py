@@ -1,4 +1,4 @@
- class Store (object):
+class Store (object):
 
     def __init__(self, products, address, owner):
         self.products = products
@@ -14,23 +14,26 @@
             self.products.remove(product)
     
     def total_amount(self):
-        print len(self.products)
+        return len(self.products)
     
     def product_amount(self, name):
         count = 0
         for item in self.products:
             if name in item:
                 count += 1
-        print count
+        return count
     
     def inventory(self):
+        productItems = ''
         for item in self.products:
-            print('{}\n'.format(item))
+            productItems += item + ', '
+        return productItems
 
 zankerRoad = Store(['iPhone smartphone', 'Samsung smartphone', 'coffee'], '1920 Zanker Road', "Mrs. Schmid")
-# zankerRoad.add_product('honey')
-zankerRoad.inventory()
-zankerRoad.product_amount('iPhone')
+zankerRoad.add_product('honey')
+zankerRoad.add_product('MBP')
+print(zankerRoad.inventory())
+print(zankerRoad.product_amount('iPhone'))
 # print('next product\n')
 # middlefield = Store(['iPhone', 'Laptop'], '525 Middlefield Road', "Mrs. Frischmann")
 # middlefield.inventory()
